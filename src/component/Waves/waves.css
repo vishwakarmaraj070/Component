@@ -1,0 +1,75 @@
+.Ripple, .Ripple-primary, .Ripple-secondary, .Ripple-danger, .Ripple-close, .Ripple-purple {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.Ripple-primary {
+  background: #8696ca;
+}
+
+.Ripple-outline-primary {
+  background: #919fcf;
+}
+
+.Ripple-secondary {
+  background: #9dd7cb;
+}
+
+.Ripple-outline-secondary {
+  background: #a8dcd0;
+}
+
+.Ripple-danger {
+  background: #f6acac;
+}
+
+.Ripple-outline-danger {
+  background: #f8baba;
+}
+
+.Ripple-close {
+  background: #f6e9bb;
+}
+
+.Ripple-outline-close {
+  background: #f8edc8;
+}
+
+.Ripple-purple {
+  background: #cf79c9;
+}
+
+.Ripple-outline-purple {
+  background: #d384cd;
+}
+
+.Ripple.is-reppling, .is-reppling.Ripple-primary, .is-reppling.Ripple-secondary, .is-reppling.Ripple-danger, .is-reppling.Ripple-close, .is-reppling.Ripple-purple {
+  -webkit-animation: ripple 0.5s linear;
+  animation: ripple 0.5s linear;
+}
+
+.Ripple-parent {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+    transform: scale(3);
+  }
+}
+/*# sourceMappingURL=waves.css.map */

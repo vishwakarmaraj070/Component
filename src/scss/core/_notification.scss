@@ -1,0 +1,238 @@
+$top: 20px !default;
+$bottom: 20px !default;
+$closer-timmer: 2s !default;
+
+@mixin showNotification($x: 0) {
+  transform: translateX($x);
+  opacity: 0.9;
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transform: translateX($x);
+  -moz-transform: translateX($x);
+  -ms-transform: translateX($x);
+  -o-transform: translateX($x);
+}
+
+.notification-2-0-0 {
+  &.notification2 {
+    min-width: 260px;
+    max-width: 300px;
+    padding: 0 2rem 0 1rem;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1200001;
+
+    .toast {
+      border-radius: 5px;
+      box-shadow: $z-depth-1;
+      text-transform: capitalize;
+      margin: 0.5rem 0;
+      padding: 0.9rem 1.3rem;
+      width: 100%;
+      font-size: 0.9rem;
+      overflow: hidden;
+      position: relative;
+      transition: $transition-fast;
+      -webkit-transition: $transition-fast;
+      -moz-transition: $transition-fast;
+      -ms-transition: $transition-fast;
+      -o-transition: $transition-fast;
+
+      .notification-closer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+        z-index: -1;
+
+        &::before {
+          content: "";
+          top: 0;
+          height: 100%;
+          width: 7px;
+          z-index: 2;
+          left: 0;
+          position: absolute;
+        }
+      }
+    }
+    @each $name, $color in $component-colors {
+      &.notification-#{$name} {
+        .toast {
+          background-color: $color;
+          color: $white;
+          .notification-closer {
+            background-color: lighten($color: $color, $amount: 8);
+            &::before {
+              background-color: darken($color: $color, $amount: 10);
+            }
+          }
+        }
+      }
+    }
+    // center
+    &.center {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%) scale(0.2);
+      opacity: 0;
+      .show {
+        transform: translate(-50%) scale(1);
+        opacity: 0.88;
+        transition: $transition-fast;
+      }
+    }
+
+    // top
+    &.top-left {
+      left: $top;
+      top: $top;
+      .toast {
+        transform: translateX(-80%);
+        opacity: 0;
+        -webkit-transform: translateX(-80%);
+        -moz-transform: translateX(-80%);
+        -ms-transform: translateX(-80%);
+        -o-transform: translateX(-80%);
+      }
+      .show {
+        &.toast {
+          @include showNotification(0);
+          .notification-closer {
+            animation: nCloser $closer-timmer linear;
+            -webkit-animation: nCloser $closer-timmer linear;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+    &.top-center {
+      left: 50%;
+      top: $top;
+      .toast {
+        transform: translateX(-50%) scale(0.2);
+        opacity: 0;
+      }
+      .show {
+        &.toast {
+          @include showNotification(0);
+          .notification-closer {
+            animation: nCloser $closer-timmer linear;
+            -webkit-animation: nCloser $closer-timmer linear;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+
+    &.top-right {
+      right: 0;
+      top: 65px;
+      .toast {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      .show {
+        &.toast {
+          @include showNotification(0);
+          .notification-closer {
+            animation: nCloser $closer-timmer linear;
+            -webkit-animation: nCloser $closer-timmer linear;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+
+    // bottom
+    &.bottom-left {
+      left: $bottom;
+      bottom: $bottom;
+      .toast {
+        transform: translateX(-80%);
+        opacity: 0;
+      }
+      .show {
+        &.toast {
+          @include showNotification(0);
+          .notification-closer {
+            animation: nCloser $closer-timmer linear;
+            -webkit-animation: nCloser $closer-timmer linear;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+    &.bottom-center {
+      left: 50%;
+      bottom: $bottom;
+      .toast {
+        transform: translateX(80%);
+        opacity: 0;
+        -webkit-transform: translateX(80%);
+        -moz-transform: translateX(80%);
+        -ms-transform: translateX(80%);
+        -o-transform: translateX(80%);
+      }
+      .show {
+        &.toast {
+          @include showNotification(0);
+          .notification-closer {
+            animation: nCloser $closer-timmer linear;
+            -webkit-animation: nCloser $closer-timmer linear;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+    &.bottom-right {
+      right: $bottom;
+      bottom: $bottom;
+      .toast {
+        transform: translateX(80%);
+        opacity: 0;
+        -webkit-transform: translateX(80%);
+        -moz-transform: translateX(80%);
+        -ms-transform: translateX(80%);
+        -o-transform: translateX(80%);
+      }
+      .show {
+        &.toast {
+          @include showNotification(0);
+          .notification-closer {
+            animation: nCloser $closer-timmer linear;
+            -webkit-animation: nCloser $closer-timmer linear;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes nCloser {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes nCloser {
+  to {
+    width: 100%;
+  }
+}

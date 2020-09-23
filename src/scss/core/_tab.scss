@@ -1,0 +1,116 @@
+$tab-padding: 0.63rem 1.4rem !default;
+
+.r-tabs {
+  margin: 0.5rem 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  .tab {
+    position: relative;
+    &:first-child::after {
+      display: none;
+    }
+    &:last-child::before {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 1px;
+      height: calc(100% - 18px);
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+    }
+
+    &::before {
+      right: -1px;
+      left: auto;
+      z-index: 2;
+    }
+
+    a {
+      position: relative;
+      border-radius: 5px 5px 0 0;
+      font-size: 0.83rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-transition: $transition;
+      transition: $transition;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: $tab-padding;
+      border-radius: 5px 5px 0 0;
+      text-decoration: none;
+      color: inherit;
+      transition: $transition;
+
+      svg,
+      i {
+        margin-right: 0.9rem;
+      }
+    }
+  }
+  @each $name, $value in $component-colors {
+    &.tab-#{$name} {
+      .tab {
+        &::after,
+        &::before {
+          background-color: $value;
+        }
+
+        a {
+          color: $value;
+          border-bottom: 1px solid $value;
+          svg,
+          i {
+            color: $value;
+            fill: $value;
+            max-width: 17px;
+            max-height: 17px;
+          }
+
+          &.active {
+            background-color: $value;
+            color: $white;
+            svg,
+            i {
+              color: $white;
+              fill: $white;
+            }
+            &:hover {
+              background-color: darken($color: $value, $amount: 8);
+              color: $white;
+            }
+
+            &::after {
+              content: none;
+              bottom: 0 !important;
+            }
+            & &::before {
+              background-color: $white;
+            }
+          }
+          &:hover {
+            background-color: lighten($color: $value, $amount: 35);
+            color: darken($color: $value, $amount: 10);
+            border-radius: 5px 5px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

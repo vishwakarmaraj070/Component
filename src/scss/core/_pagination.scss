@@ -1,0 +1,111 @@
+// Pagination
+$pagination-padding-y: 0.2rem !default;
+$pagination-padding-x: 0.55rem !default;
+$pagination-bg: $white !default;
+$pagination-border-width: 1px !default;
+$pagination-border-radius: 0.25rem !default;
+$pagination-margin-left: -$pagination-border-width !default;
+
+$pagination-focus-box-shadow: 0, 0, 0, 0.2rem, #e5e5e5 !default;
+$pagination-focus-outline: 0 !default;
+
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+#r-pagination {
+  display: inline-flex;
+  flex-wrap: wrap;
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    @include list-unstyled();
+
+    .page-item {
+      &:not(:first-child) .page-link {
+        margin-left: 0;
+      }
+
+      &.active-page .page-link {
+        z-index: 3;
+      }
+
+      &.disabled {
+        pointer-events: none;
+        cursor: no-drop;
+        .page-link {
+          pointer-events: none;
+          cursor: no-drop;
+        }
+      }
+
+      .page-link {
+        position: relative;
+        display: block;
+        font-size: 12px;
+        background-color: white;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: $pagination-border-radius;
+        padding: $pagination-padding-y $pagination-padding-x;
+        &:hover {
+          transition: $transition-fast;
+          z-index: 2;
+          text-decoration: none;
+        }
+
+        &:focus {
+          z-index: 3;
+        }
+      }
+    }
+
+    // color pagination
+    @each $name, $value in $component-colors {
+      &.pg-#{$name} {
+        svg {
+          fill: $value;
+        }
+        .page-link {
+          color: $value;
+          .is-reppling {
+            background: lighten($color: $value, $amount: 20);
+          }
+          &:hover {
+            background-color: lighten($color: $value, $amount: 35);
+          }
+        }
+        .page-item {
+          &.active-page {
+            pointer-events: none;
+            .page-link {
+              background-color: $value;
+              color: white;
+              border-radius: 0.15rem;
+              box-shadow: $z-depth-1;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+    // pagination circle
+    &.pagination-circle {
+      .page-link {
+        border-radius: 50%;
+        margin: 0 1px;
+      }
+      .page-item.active-page {
+        .page-link {
+          border-radius: 50% !important;
+        }
+      }
+    }
+    .previous {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

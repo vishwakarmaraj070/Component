@@ -1,0 +1,28 @@
+#r-fieldset {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-box-shadow: 0 1px 6px 0 #7f90c7 !important;
+          box-shadow: 0 1px 6px 0 #7f90c7 !important;
+}
+
+#r-fieldset legend {
+  color: #fff;
+  padding: 0.5rem 2rem;
+  background-color: #44599c;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+/*# sourceMappingURL=fieldset-style.css.map */

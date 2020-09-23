@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel&display=swap");
+.r-captcha {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 0.5rem;
+ width: auto;
+ display: inline-block;
+  background-color: $light-periwinkle;
+
+  .captcha-lebel {
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: $dusky-blue;
+  }
+
+  .captcha-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 0.4rem 0 0.6rem;
+
+    .captcha-char {
+      width: 249px;
+      font-family: "Cinzel", serif !important;
+      height: 74px;
+      border-radius: 5px;
+      background-color: $white;
+      font-size: 2rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-transform: uppercase;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-blend-mode: overlay;
+      -webkit-transition: $transition;
+      transition: $transition;
+      span {
+        font-family: "Cinzel", serif !important;
+        margin: 0;
+        position: relative;
+        color: lightslategray;
+        padding: 0.2rem;
+      }
+
+      span:nth-child(odd) {
+        -webkit-transform: rotate(-30deg);
+                transform: rotate(-30deg);
+        top: -5px;
+      }
+      span:nth-child(even) {
+        -webkit-transform: rotate(30deg);
+                transform: rotate(30deg);
+        top: 5px;
+      }
+      span:nth-child(3n) {
+        -webkit-transform: rotate(-50deg);
+                transform: rotate(-50deg);
+        top: 0px;
+      }
+    }
+
+    .captcha-sound {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-left: 0.5rem;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+
+      svg {
+        cursor: pointer;
+
+        &:hover {
+          -webkit-transition: $transition;
+          transition: $transition;
+          fill: $greyish-teal;
+        }
+
+        &.redo-anim {
+          -webkit-transform-origin: center;
+                  transform-origin: center;
+          -webkit-animation: redoAnimation 0.16s ease-in-out;
+                  animation: redoAnimation 0.16s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .captcha-input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: $dusky-blue;
+
+    input {
+      width: 193px;
+      height: 24px;
+      border-radius: 5px;
+      background-color: #fff;
+      border: none;
+      outline: none;
+      font-size: 12px;
+      font-weight: 600;
+      font-stretch: normal;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      padding: 4px 1rem;
+    }
+  }
+
+  .captch-action {
+    text-align: right;
+    margin-top: 4px;
+  }
+
+  @each $name, $value in $component-colors {
+    &.captcha-#{$name} {
+      .captcha-char {
+        @if $name == "primary" {
+          background-color: lighten($color: $value, $amount: 45);
+        }
+        @if $name == "secondary" {
+          background-color: lighten($color: $value, $amount: 35);
+        }
+        @if $name == "danger" {
+          background-color: lighten($color: $value, $amount: 33);
+        }
+        @if $name == "close" {
+          background-color: lighten($color: $value, $amount: 25);
+        }
+        @if $name == "purple" {
+          background-color: lighten($color: $value, $amount: 46);
+        }
+        span {
+          color: $value;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes redoAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes redoAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  70% {
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}

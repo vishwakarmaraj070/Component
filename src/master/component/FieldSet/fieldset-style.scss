@@ -1,0 +1,26 @@
+#r-fieldset {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 1px 6px 0 lighten($color: #44599c, $amount: 20) !important;
+
+  legend {
+    color: #fff;
+    padding: 0.5rem 2rem;
+    background-color: #44599c;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g id="Icons/Basic/windsock" stroke="none" stroke-width="1"  fill-rule="evenodd">
+        <g id="windsock" transform="translate(5.000000, 2.000000)" >
+            <path d="M13.08,3 L5,2.33 L5,2.33 L2,2.08 L2,1 C2,0.44771525 1.55228475,0 1,0 C0.44771525,0 0,0.44771525 0,1 L0,19 C0,19.5522847 0.44771525,20 1,20 C1.55228475,20 2,19.5522847 2,19 L2,11.92 L5,11.67 L5,11.67 L13.08,11 C13.6008219,10.958203 14.0016745,10.5224937 14,10 L14,4 C14.0016745,3.47750629 13.6008219,3.04179703 13.08,3 Z M4,9.75 L2,9.91 L2,4.09 L4,4.25 L4,9.75 Z M8,9.41 L6,9.58 L6,4.42 L8,4.59 L8,9.41 Z M12,9.08 L10,9.25 L10,4.75 L12,4.92 L12,9.08 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

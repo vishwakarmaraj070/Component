@@ -1,0 +1,134 @@
+// globle
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+  letter-spacing: 0.033rem;
+}
+
+// :root {
+//   --white: #ffffff;
+//   --ice-two: #dbf0e2;
+//   --dusky-blue: #44599c;
+//   --greyish-teal: #4db7a0;
+//   --light-periwinkle: #dce1ef;
+//   --faded-blue: #5f75b9;
+//   --dark-grey-blue: #2e3d6b;
+//   --ice: #dbf0ec;
+//   --pale-teal: #80ccbb;
+//   --ocean-green: #398e7b;
+//   --dark-mint: #4db76f;
+//   --maize: #eac857;
+//   --pale: #f9f0d2;
+//   --pastel-red: #eb4747;
+//   --light-peach: #fad1d1;
+//   --ugly-purple: #9e3997;
+//   --very-light-purple: #f1daf0;
+//   --dark: #16181d;
+//   --charcoal-grey: #2c303a;
+//   --gunmetal: #424857;
+//   --light-blue-grey: #c5c9d3;
+//   --light-periwinkle-two: #dcdfe5;
+//   --pale-grey: #eeeff2;
+//   --pale-grey-two: #f9fafb;
+// }
+
+// shadow
+$z-depth-1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !default;
+$z-depth-1-half: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+  0 4px 15px 0 rgba(0, 0, 0, 0.15) !default;
+$z-depth-2: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !default;
+$z-depth-3: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !default;
+$z-depth-4: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21) !default;
+$z-depth-5: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22) !default;
+$card-shadow: 0 1px 6px 0 rgba(90, 106, 151, 0.28) !default;
+
+// transition
+$transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !default;
+$transition-fast: all 0.16s cubic-bezier(0.4, 0, 0.2, 1) !default;
+
+$border-radius: 5px !default;
+
+.flex-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 420px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@import "./color";
+
+// core
+
+@import "./core/card";
+
+@import "./core/button";
+
+@import "./core/switchBtn";
+
+@import "./core/checkbox";
+
+@import "./core/notification";
+
+@import "./core/radio";
+
+@import "./core/pagination";
+
+@import "./core/input";
+
+@import "./core/modal";
+
+@import "./core/accordion";
+
+@import "./core/badge";
+
+@import "./core/dropdown";
+
+@import "./core/tab";
+
+@import "./core/dragDrop";
+
+@import "./core/editableTable";
+
+@import "./core/progressbar";
+
+@import "./core/stepper";
+
+@import "./core/alert";
+
+@import "./core/importProgress";
+
+@import "./core/captcha";
+
+@import "./core/Grid/grid-core";
+
+@import "./core/select";
+
+@import "./core/table";
+
+@import "./core//link";
+
+@import "./core/others";
+
+@import "./core/spacing";
+
+@import "./core/text_style";
+
+@import "./core/layout";
+
+@import "./core/form";
+
+@import "./core/headingicon";
+
+@import "./core/filterNav";
+
+@import "./core/columnFilter";

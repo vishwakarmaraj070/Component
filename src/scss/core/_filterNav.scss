@@ -1,0 +1,187 @@
+.r-filter-nav {
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: $z-depth-1;
+  box-shadow: $z-depth-1;
+  border: 2px solid $dusky-blue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: $transition;
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+
+  table,
+  th,
+  td {
+    border: 1px solid lighten($color: $dusky-blue, $amount: 50);
+    border-collapse: collapse;
+    padding: 3px 5px;
+    line-height: normal;
+    text-align: center;
+  }
+  s table,
+  tr {
+    width: 100%;
+  }
+  .filter-row-box {
+    border-right: 2px solid $dusky-blue;
+    padding: 5px 10px;
+    width: 100%;
+
+    &.filter-row {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      overflow: hidden;
+      overflow-x: auto;
+
+      select,
+      input {
+        -webkit-box-shadow: $card-shadow;
+        box-shadow: $card-shadow;
+        background-color: #fff !important;
+        border-radius: 25px !important;
+        -webkit-border-radius: 25px !important;
+        -moz-border-radius: 25px !important;
+        -ms-border-radius: 25px !important;
+        -o-border-radius: 25px !important;
+        width: 150px;
+        padding: 1px 8px !important;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .and-or {
+        display: inline-block;
+        width: auto;
+        margin-right: 5px;
+        text-align: center;
+        span {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          font-size: 12px;
+          label {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+
+    .r-input-box {
+      margin: 0;
+    }
+
+    .filter-between {
+      display: grid;
+
+      & > div {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        span {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: auto;
+          font-size: 12px;
+          font-weight: 600;
+          color: $dusky-blue;
+          margin: 0 8px;
+        }
+      }
+    }
+
+    .action-box {
+      margin-left: 5px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      .icon-btn {
+        width: 25px;
+        line-height: 25px;
+        height: 25px;
+        font-size: 20px;
+        color: $greyish-teal;
+        margin: 0;
+      }
+    }
+  }
+
+  .clear-filter {
+    padding: 5px 10px;
+    .badge {
+      white-space: nowrap;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &.no-filter {
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    width: auto;
+    display: inline-block;
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    overflow: visible;
+
+    table,
+    th,
+    td {
+      border: none;
+      padding: 0;
+      color: #fff;
+      font-weight: 600;
+    }
+    .icon-btn {
+      margin: 0;
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .filter-row-box {
+      border: none;
+      padding: 0;
+      overflow: visible;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.r-switch-btn {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  outline: none;
+  border: none;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+
+  .before {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-transition: $transition-fast;
+    transition: $transition-fast;
+    background-color: $pale-grey;
+  }
+  .after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    -webkit-transition: $transition-fast;
+    transition: $transition-fast;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    pointer-events: none;
+    background-color: $gunmetal;
+  }
+
+  input:checked ~ .after {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+
+  @each $name, $value in $component-colors {
+    &.switch-btn-#{$name} {
+      @if $name == "primary" {
+        input:checked ~ .before {
+          background-color: lighten($color: $value, $amount: 44);
+        }
+      }
+      @if $name == "secondary" {
+        input:checked ~ .before {
+          background-color: lighten($color: $value, $amount: 33);
+        }
+      }
+      @if $name == "danger" {
+        input:checked ~ .before {
+          background-color: lighten($color: $value, $amount: 33);
+        }
+      }
+      @if $name == "close" {
+        input:checked ~ .before {
+          background-color: lighten($color: $value, $amount: 26);
+        }
+      }
+      @if $name == "purple" {
+        input:checked ~ .before {
+          background-color: lighten($color: $value, $amount: 46);
+        }
+      }
+
+      input:checked ~ .after {
+        background-color: $value;
+      }
+    }
+  }
+}

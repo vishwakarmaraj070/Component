@@ -1,0 +1,348 @@
+.dropdoen-function, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 6px 0 rgba(90, 106, 151, 0.28) !important;
+          box-shadow: 0 1px 6px 0 rgba(90, 106, 151, 0.28) !important;
+  padding: 0.7rem;
+  line-height: normal;
+  font-weight: 600;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: auto;
+  white-space: nowrap;
+  line-height: normal;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  transform: scale(1, 0);
+  -webkit-transform: scale(1, 0);
+  -moz-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  -o-transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  opacity: 0;
+  transition: all 0.16s ease-in-out;
+  -webkit-transition: all 0.16s ease-in-out;
+  -moz-transition: all 0.16s ease-in-out;
+  -ms-transition: all 0.16s ease-in-out;
+  -o-transition: all 0.16s ease-in-out;
+  z-index: 100;
+}
+
+.dropdoen-function > a, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a,
+.dropdoen-function div,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #44599c;
+  transition: all 0.16s ease-in-out;
+  -webkit-transition: all 0.16s ease-in-out;
+  -moz-transition: all 0.16s ease-in-out;
+  -ms-transition: all 0.16s ease-in-out;
+  -o-transition: all 0.16s ease-in-out;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.dropdoen-function > a svg, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a svg, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a svg,
+.dropdoen-function div svg,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div svg,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div svg {
+  width: 18px;
+  height: 18px;
+  fill: #44599c;
+  margin-right: 12px;
+  transition: all 0.16s ease-in-out;
+  -webkit-transition: all 0.16s ease-in-out;
+  -moz-transition: all 0.16s ease-in-out;
+  -ms-transition: all 0.16s ease-in-out;
+  -o-transition: all 0.16s ease-in-out;
+}
+
+.dropdoen-function > a:hover, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a:hover, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a:hover, .dropdoen-function > a:focus, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a:focus, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a:focus, .dropdoen-function > a:active, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a:active, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a:active,
+.dropdoen-function div:hover,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div:hover,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div:hover,
+.dropdoen-function div:focus,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div:focus,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div:focus,
+.dropdoen-function div:active,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div:active,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div:active {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  background-color: #44599c;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.dropdoen-function > a:hover svg, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a:hover svg, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a:hover svg, .dropdoen-function > a:focus svg, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a:focus svg, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a:focus svg, .dropdoen-function > a:active svg, #r-navbar-container .nav-user-log .nav-icon .handle-dropdown > a:active svg, #r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown > a:active svg,
+.dropdoen-function div:hover svg,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div:hover svg,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div:hover svg,
+.dropdoen-function div:focus svg,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div:focus svg,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div:focus svg,
+.dropdoen-function div:active svg,
+#r-navbar-container .nav-user-log .nav-icon .handle-dropdown div:active svg,
+#r-navbar-container .nav-user-log .nav-profile .user-handle-dropdown div:active svg {
+  fill: #fff;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.dropdoen-hover, #r-navbar-container .nav-user-log .nav-icon:hover .handle-dropdown, #r-navbar-container .nav-user-log .nav-profile:hover .user-handle-dropdown {
+  -webkit-transition-delay: opacity 0.16s;
+          transition-delay: opacity 0.16s;
+  opacity: 1;
+  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+}
+
+.dropdoen-hover > a, #r-navbar-container .nav-user-log .nav-icon:hover .handle-dropdown > a, #r-navbar-container .nav-user-log .nav-profile:hover .user-handle-dropdown > a,
+.dropdoen-hover div,
+#r-navbar-container .nav-user-log .nav-icon:hover .handle-dropdown div,
+#r-navbar-container .nav-user-log .nav-profile:hover .user-handle-dropdown div {
+  opacity: 1;
+}
+
+#r-navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  background-color: #fff;
+  text-transform: capitalize;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  z-index: 1030;
+  letter-spacing: 0.5px;
+}
+
+#r-navbar-container > div {
+  line-height: 65px;
+}
+
+#r-navbar-container .nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  margin-left: 1rem;
+  position: relative;
+}
+
+#r-navbar-container .nav-logo svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  fill: #44599c;
+}
+
+#r-navbar-container .nav-logo img {
+  width: 70px;
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+}
+
+#r-navbar-container .nav-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  font-weight: 600;
+}
+
+#r-navbar-container .nav-menu a {
+  padding: 0 1.7rem;
+  margin: 0 3px;
+  text-decoration: none;
+  color: #44599c;
+  line-height: 80px;
+  letter-spacing: 0.47px;
+}
+
+#r-navbar-container .nav-menu a:hover {
+  -webkit-transition: all 0.16s ease-in-out;
+  transition: all 0.16s ease-in-out;
+  background-color: #e9ecf6;
+}
+
+#r-navbar-container .nav-menu a.r-nav-active {
+  transition: all 0.16s ease-in-out;
+  background-color: #44599c;
+  color: white;
+  -webkit-transition: all 0.16s ease-in-out;
+  -moz-transition: all 0.16s ease-in-out;
+  -ms-transition: all 0.16s ease-in-out;
+  -o-transition: all 0.16s ease-in-out;
+  border-radius: 0 0 15px 15px;
+  -webkit-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  -ms-border-radius: 0 0 15px 15px;
+  -o-border-radius: 0 0 15px 15px;
+}
+
+#r-navbar-container .nav-user-log {
+  font-weight: 600;
+  position: relative;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  z-index: 1030;
+  color: #44599c;
+}
+
+#r-navbar-container .nav-user-log > div {
+  position: relative;
+}
+
+#r-navbar-container .nav-user-log .nav-icon {
+  margin-right: 0.4rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+#r-navbar-container .nav-user-log .nav-icon a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#r-navbar-container .nav-user-log .nav-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #44599c;
+  cursor: pointer;
+  transition: all 0.16s ease-in-out;
+  -webkit-transition: all 0.16s ease-in-out;
+  -moz-transition: all 0.16s ease-in-out;
+  -ms-transition: all 0.16s ease-in-out;
+  -o-transition: all 0.16s ease-in-out;
+}
+
+#r-navbar-container .nav-user-log .nav-icon:hover svg {
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+}
+
+#r-navbar-container .nav-user-log .nav-profile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
+  padding: 0 10px;
+  transform: all 0.16s ease-in-out;
+  -webkit-transform: all 0.16s ease-in-out;
+  -moz-transform: all 0.16s ease-in-out;
+  -ms-transform: all 0.16s ease-in-out;
+  -o-transform: all 0.16s ease-in-out;
+}
+
+#r-navbar-container .nav-user-log .nav-profile .divider-log {
+  width: 3px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #edf1fa;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+#r-navbar-container .nav-user-log .nav-profile .user-icon {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #44599c;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin: 0 0.7rem;
+}
+
+#r-navbar-container .nav-user-log .nav-profile:hover {
+  background-color: #a2afd7;
+}
+
+#r-navbar-container .nav-user-log .nav-profile:hover .divider-log {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=navbar-style.css.map */

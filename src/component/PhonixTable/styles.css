@@ -1,0 +1,80 @@
+/* table global css */
+.Phonix_table {
+  width: 100%;
+  border: solid 1px #dce1ef;
+  position: relative;
+}
+
+.Phonix_table input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  outline: none;
+}
+.Phonix_table input:-moz-read-only {
+  background-color: white;
+}
+.Phonix_table input:read-only {
+  background-color: white;
+}
+
+.Phonix_table,
+.Phonix_table_th,
+.Phonix_table_td {
+  border-collapse: collapse;
+  border: solid 1px #dce1ef;
+}
+
+/* heading */
+.Phonix_table_head th {
+  padding: 8px;
+  background-color: #dce1ef;
+}
+
+/* body */
+.Phonix_table_td input {
+  text-align: right;
+}
+
+.Phonix_table_td input:focus {
+  background-color: lightgray;
+}
+
+.Phonix_table_edit_effect {
+  background-color: lightblue !important;
+}
+
+/* footer */
+tfoot {
+  margin-top: 20px;
+}
+
+.Phonix_table_select {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.Phonix_table_select option {
+  padding: 5px;
+}
+
+.Phonix_table_fotter input:-moz-read-only {
+  background-color: #f9fafb !important;
+}
+
+.Phonix_table_fotter input:read-only {
+  background-color: #f9fafb !important;
+}
+
+.phonix_table_customstyle {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}

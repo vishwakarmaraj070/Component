@@ -1,0 +1,144 @@
+.r-stepper {
+  position: relative;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.4rem;
+  overflow: hidden;
+  -webkit-transition: $transition;
+  transition: $transition;
+
+  // dots styles
+  .dot-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+    position: relative;
+    height: 25px;
+    width: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 4px);
+      top: 50%;
+      left: 2px;
+      right: 2px;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      height: 2px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      z-index: 2;
+      border-radius: 50%;
+
+      &.active-dot {
+        -webkit-transition: $transition-fast;
+        transition: $transition-fast;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  &.stepper-num {
+    .dot-container {
+      height: 35px;
+    }
+    .dot {
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: $white;
+      border-radius: 50%;
+
+      &.active-dot {
+        -webkit-transition: $transition-fast;
+        transition: $transition-fast;
+        width: 25px;
+        line-height: 25px;
+        font-size: 16px;
+        height: 25px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @each $color-name, $color-value in $component-colors {
+    &.stepper-#{$color-name} {
+      .dot-container {
+        &::before,
+        .dot {
+          background-color: $color-value;
+        }
+        .dot.active-dot {
+          background-color: $greyish-teal;
+          @if $color-name == "secondary" {
+            background-color: $dusky-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .step-container {
+    overflow: hidden;
+  }
+
+  // step style
+  .r-step {
+    padding: 0.8rem;
+    position: absolute;
+    left: -50%;
+    opacity: 0;
+    display: block;
+    visibility: hidden;
+
+    &.active-dot-page {
+      -webkit-transition: $transition;
+      transition: $transition;
+      position: relative;
+      opacity: 1;
+      left: 0;
+      visibility: visible;
+    }
+  }
+
+  &.vertical {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+    .dot-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      width: 25px;
+      height: auto;
+
+      &::before {
+        width: 2px;
+        left: 50%;
+        top: auto;
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        height: calc(100% - 4px);
+      }
+    }
+  }
+}

@@ -1,0 +1,325 @@
+// variable
+$btn-padding: 0 1.875rem;
+$btn-padding-sm: 0 1.75rem;
+$btn-padding-lg: 0 2.813rem;
+
+$btn-height: 2.5rem;
+$btn-sm-height: 2rem;
+$btn-lg-height: 3rem;
+
+$btn-font-size: 0.75rem;
+$btn-font-size-sm: 0.75rem;
+$btn-font-size-lg: 1rem;
+
+$btn-margin: 0.3em;
+$btn-letter-spacing: 0.033rem;
+$border-radius: 5px;
+$box-shadow: 1px 1px 6px;
+
+.btn-root {
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  outline: 0;
+  position: relative;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  font-size: $btn-font-size;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -moz-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -ms-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: $btn-letter-spacing;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
+  color: #222;
+  box-shadow: $box-shadow rgba(0, 22, 28, 0.2);
+}
+
+.btn-2-0-0 {
+  &.rbtn {
+    margin: $btn-margin;
+    display: inline-block;
+    position: relative;
+    .btn2 {
+      @extend.btn-root;
+
+      span {
+        display: inline-flex;
+        align-items: center;
+      }
+      // button
+      &.button2 {
+        padding: $btn-padding;
+        height: $btn-height;
+      }
+
+      // icon button
+      &.icon-btn2,
+      &.floating-btn {
+        width: $btn-height;
+        height: $btn-height;
+        text-align: center;
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+        svg,
+        img,
+        i {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      // btn size
+      &.btn-sm {
+        font-size: $btn-font-size-sm;
+        &.button2 {
+          padding: $btn-padding-sm;
+          height: $btn-sm-height;
+        }
+
+        &.icon-btn2,
+        &.floating-btn {
+          width: $btn-sm-height;
+          height: $btn-sm-height;
+          svg,
+          img,
+          i {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      &.btn-lg {
+        font-size: $btn-font-size-lg;
+        &.button2 {
+          padding: $btn-padding-lg;
+          height: $btn-lg-height;
+        }
+        &.icon-btn2,
+        &.floating-btn {
+          width: $btn-lg-height;
+          height: $btn-lg-height;
+          svg,
+          img,
+          i {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+
+      &.floating-btn {
+        box-shadow: $z-depth-1-half;
+        border-radius: 50% !important;
+        -webkit-border-radius: 50% !important;
+        -moz-border-radius: 50% !important;
+        -ms-border-radius: 50% !important;
+        -o-border-radius: 50% !important;
+      }
+
+      // loading
+      .btn-loader-wrapper {
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        @extend.flex-center;
+        transition: $transition-fast;
+        -webkit-transition: $transition-fast;
+        -moz-transition: $transition-fast;
+        -ms-transition: $transition-fast;
+        -o-transition: $transition-fast;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+        opacity: 0;
+        transform-origin: center;
+      }
+      &.isLoading {
+        pointer-events: none;
+        .btn-loader-wrapper {
+          &.open {
+            opacity: 1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            z-index: 101;
+          }
+        }
+      }
+
+      // btn color
+      @each $name, $color in $component-colors {
+        &.btn-#{$name} {
+          background-color: lighten($color: $color, $amount: 5);
+          color: $white;
+          fill: $white;
+          &.btn-outlined,
+          &.btn-flat {
+            background-color: transparent !important;
+            border-color: $color;
+            color: $color;
+            fill: $color;
+          }
+
+          &.btn-flat {
+            border: none;
+            box-shadow: none !important;
+            &:hover {
+              &.icon-btn2 {
+                transition: $transition-fast;
+                -webkit-transition: $transition-fast;
+                -moz-transition: $transition-fast;
+                -ms-transition: $transition-fast;
+                -o-transition: $transition-fast;
+                background-color: lighten(
+                  $color: $color,
+                  $amount: 35
+                ) !important;
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transform-origin: center;
+              }
+            }
+            &.floating-btn {
+              box-shadow: $z-depth-1-half !important;
+            }
+          }
+
+          &:hover,
+          &:focus,
+          &:active {
+            box-shadow: $z-depth-1;
+            background-color: darken($color: $color, $amount: 7);
+            &.floating-btn {
+              box-shadow: $z-depth-2;
+            }
+          }
+        }
+      }
+
+      // disbaled button
+      &[disabled] {
+        opacity: 0.3;
+        cursor: default;
+        pointer-events: none;
+      }
+
+      // rounded btn
+      &.btn-rounded {
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        &.icon-btn2 {
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+
+      span.icon-box {
+        @extend .flex-center;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        * {
+          width: 100%;
+          height: 100%;
+        }
+        &.left {
+          margin-right: 10px;
+        }
+        &.right {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &[data-title]:hover::after {
+      content: attr(data-title);
+      position: absolute;
+      bottom: 105%;
+      background-color: lighten($color: $dusky-blue, $amount: 45);
+      padding: 1px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: capitalize;
+      white-space: nowrap;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      color: $dusky-blue;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      letter-spacing: $btn-letter-spacing;
+      transition: $transition-fast;
+      -webkit-transition: $transition-fast;
+      -moz-transition: $transition-fast;
+      -ms-transition: $transition-fast;
+      -o-transition: $transition-fast;
+    }
+
+    &.table-btn {
+      margin: 0;
+
+      button {
+        width: 24px !important;
+        height: 24px !important;
+        padding: 3;
+        img,
+        svg,
+        i {
+          width: 16px !important;
+          height: 16px !important;
+        }
+      }
+    }
+  }
+}

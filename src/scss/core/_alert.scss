@@ -1,0 +1,74 @@
+.r-alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  -webkit-box-shadow: $z-depth-1;
+          box-shadow: $z-depth-1;
+  -webkit-transition: $transition-fast;
+  transition: $transition-fast;
+  opacity: 0;
+  font-size: 0.85rem;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  overflow: hidden;
+  padding: 0 3.3rem 0 1.2rem;
+
+  .close {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+    &:hover {
+      -webkit-transition: $transition-fast;
+      transition: $transition-fast;
+      background-color: $pastel-red;
+      color: white;
+      -webkit-box-shadow: $z-depth-1;
+              box-shadow: $z-depth-1;
+
+      svg {
+        -webkit-transition: $transition-fast;
+        transition: $transition-fast;
+        fill: $white;
+      }
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    padding: 0.8rem 3.3rem 0.8rem 1.2rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  @each $color-name, $color-value in $component-colors {
+    &.alert-#{$color-name} {
+      background-color: lighten($color: $color-value, $amount: 30);
+      color: $color-value;
+      svg {
+        fill: $pastel-red;
+      }
+    }
+  }
+}

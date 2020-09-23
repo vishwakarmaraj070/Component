@@ -1,0 +1,309 @@
+// variable
+$card-border: 1px solid $pale-grey;
+$card-radius: $border-radius;
+$card-padding: 1.5rem !default;
+$card-margin: 0.5rem !default;
+// wider card
+$wider-extra-width: 1.8rem !default;
+
+@media (max-width: 420px,) {
+  $padding: 0.7rem;
+}
+.card-root {
+  position: relative;
+  background-color: #fff;
+  border-radius: $card-radius;
+  -webkit-border-radius: $card-radius;
+  -moz-border-radius: $card-radius;
+  -ms-border-radius: $card-radius;
+  -o-border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  display: inline-block;
+  width: auto;
+  min-width: 290px;
+  max-width: 100%;
+}
+
+.card-2-0-0 {
+  &.rcard {
+    position: relative;
+
+    // basic card
+    .card2 {
+      @extend .card-root;
+      .card-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        color: $dusky-blue;
+        text-transform: capitalize;
+        padding: $card-padding / 1.8 $card-padding;
+        font-weight: 600;
+        border-bottom: $card-border;
+        justify-content: space-between;
+        align-self: center;
+        & > span {
+          display: inline-flex;
+          align-items: center;
+          & > * {
+            margin: 0;
+            &:nth-child(2n) {
+              margin-left: 0.7rem;
+            }
+          }
+        }
+        .icon-title {
+          .icon {
+            display: inline-flex;
+            align-items: center;
+            padding: 3px;
+            fill: $greyish-teal;
+            color: $greyish-teal;
+            position: relative;
+            left: -6px;
+            svg,
+            img,
+            i {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+        .other {
+          margin-left: 2rem;
+        }
+
+        .search-input {
+          position: relative;
+          input {
+            color: #343434;
+            border: 1px solid transparent;
+            transition: $transition-fast;
+            letter-spacing: 1px;
+            font-weight: 400;
+            outline: none;
+            word-wrap: normal;
+            white-space: normal;
+            font-size: 0.75rem;
+            padding: 0.344rem 1.125rem;
+            padding-right: 3rem;
+            z-index: 5;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: $card-shadow;
+            -webkit-border-radius: 25px;
+            width: 140px;
+            -webkit-transition: $transition-fast;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+            -moz-transition: $transition-fast;
+            -ms-transition: $transition-fast;
+            -o-transition: $transition-fast;
+
+            &:focus,
+            &.focus {
+              transition: $transition;
+              width: 210px;
+              -webkit-transition: $transition;
+              -moz-transition: $transition;
+              -ms-transition: $transition;
+              -o-transition: $transition;
+            }
+          }
+
+          .hader-search-box {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+
+            .hader-search-btn {
+              margin: 0;
+              button {
+                width: 20px;
+                height: 20px;
+                svg {
+                  width: 13px;
+                  height: 13px;
+                }
+              }
+              transform-origin: center;
+              transition: $transition-fast;
+              transform: scale(0);
+              -webkit-transform: scale(0);
+              -moz-transform: scale(0);
+              -ms-transform: scale(0);
+              -o-transform: scale(0);
+              -webkit-transition: $transition-fast;
+              -moz-transition: $transition-fast;
+              -ms-transition: $transition-fast;
+              -o-transition: $transition-fast;
+              opacity: 0.3;
+
+              &.focus {
+                &:nth-child(2) {
+                  transition-delay: 0.16s;
+                }
+                transition: $transition;
+                -webkit-transition: $transition;
+                -moz-transition: $transition;
+                -ms-transition: $transition;
+                -o-transition: $transition;
+                transform: scale(1);
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -ms-transform: scale(1);
+                -o-transform: scale(1);
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .card-body {
+        position: relative;
+        font-size: 0.9rem;
+        padding: $card-padding / 1.5 $card-padding;
+        height: auto;
+        max-height: 100%;
+        overflow: auto;
+        font-weight: 500;
+      }
+
+      &.tableCard {
+        width: calc(100% - 1rem);
+        .card-body {
+          padding: 0;
+        }
+        .card-footer {
+          padding-left: $card-padding / 1.8;
+          justify-content: space-between;
+        }
+      }
+      .card-footer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: $card-padding / 2 $card-padding;
+        border-top: $card-border;
+        & > * {
+          margin: 0;
+          &:nth-child(2n) {
+            margin-left: 0.5rem;
+          }
+        }
+
+        &.right {
+          justify-content: flex-end;
+          text-align: right;
+        }
+      }
+
+      // text align
+      &.textAlign-center {
+        .card-body,
+        .card-footer,
+        .card-header {
+          text-align: center;
+          justify-content: center;
+        }
+      }
+
+      &.textAlign-right {
+        .card-body,
+        .card-footer,
+        .card-header {
+          text-align: right;
+          justify-content: flex-end;
+        }
+      }
+
+      @each $name, $color in $component-colors {
+        &.card-#{$name} {
+          box-shadow: 0 1px 6px 0 rgba($color, 0.28);
+          .card-header,
+          .card-body,
+          .card-footer {
+            color: $color;
+            border-color: lighten($color: $color, $amount: 45);
+          }
+          @if $name == "danger" {
+            .icon-title {
+              .icon svg {
+                color: $color;
+                fill: $color;
+              }
+            }
+            .card-body {
+              background-color: lighten($color: $color, $amount: 35);
+            }
+          }
+          @if $name == "close" {
+            .icon-title {
+              .icon svg {
+                color: $color;
+                fill: $color;
+              }
+            }
+            .card-body {
+              background-color: lighten($color: $color, $amount: 30);
+            }
+          }
+        }
+      }
+    }
+
+    // wider card
+    .wider-card {
+      left: $wider-extra-width / 2;
+      margin-right: $wider-extra-width;
+      .card-header {
+        width: calc(100% + 1.8rem);
+        left: -$wider-extra-width / 2;
+        box-shadow: $z-depth-1-half;
+        background-color: $white;
+        border-radius: $card-radius;
+        -webkit-border-radius: $card-radius;
+        -moz-border-radius: $card-radius;
+        -ms-border-radius: $card-radius;
+        -o-border-radius: $card-radius;
+      }
+      .card-body {
+        padding-top: $card-padding + 0.5;
+      }
+    }
+
+    // narrow card
+    .narrow-card {
+      top: $wider-extra-width / 2;
+      .card-header {
+        width: calc(100% - 1.8rem);
+        left: $wider-extra-width / 2;
+        top: -$wider-extra-width / 2;
+        box-shadow: $z-depth-1-half;
+        background-color: $white;
+        border-radius: $card-radius;
+        -webkit-border-radius: $card-radius;
+        -moz-border-radius: $card-radius;
+        -ms-border-radius: $card-radius;
+        -o-border-radius: $card-radius;
+      }
+      .card-body {
+        margin-top: -$card-padding;
+        padding-top: $card-padding + 0.5;
+      }
+    }
+  }
+}

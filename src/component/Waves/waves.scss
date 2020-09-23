@@ -1,0 +1,52 @@
+$component-colors: (
+  "primary": #44599c,
+  "secondary": #4db7a0,
+  "danger": #eb4747,
+  "close": #eac857,
+  "purple": #9e3997
+);
+
+.Ripple {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+@each $name, $color in $component-colors {
+  .Ripple-#{$name} {
+    @extend .Ripple;
+    background: lighten($color: $color, $amount: 22);
+  }
+  .Ripple-outline-#{$name} {
+    background: lighten($color: $color, $amount: 25);
+  }
+}
+
+.Ripple.is-reppling {
+  -webkit-animation: ripple 0.5s linear;
+          animation: ripple 0.5s linear;
+}
+
+.Ripple-parent {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
