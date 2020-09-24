@@ -1,6 +1,6 @@
 import React from "react";
 import FieldSet from "../../master/component/FieldSet";
-import { Input } from "phoenix-component";
+import { Input } from "../../component/Input";
 
 const index = (props) => {
   return (

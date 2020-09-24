@@ -1,23 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import {
-  SubmitButton,
-  AddIconButton,
-  TableDeleteButton,
-  Card,
-  CardHeader,
-  EditIconButton,
-  DeleteIconButton,
-  TableEditButton,
-  CardBody,
-  CardFooter,
-  Button,
-  Notification,
-  SaveNotification,
-  DeleteModal,
-  WarningModal,
-  FormModal,
-} from "saral-component";
 const TestingPage = (props) => {
   const [toggle, setToggle] = useState(false);
   return (

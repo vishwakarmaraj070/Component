@@ -6,7 +6,7 @@ import {
   TableEditButton,
   TableDeleteButton,
 } from "../../component/Button";
-import { Pagination } from "phoenix-component";
+import Pagination from "../../component/Pagination";
 import { TableBody, TableHeader, Table } from "../../component/Table";
 const MoreCards = (props) => {
   return (
