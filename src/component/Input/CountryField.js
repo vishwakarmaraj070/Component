@@ -4,18 +4,21 @@ import classnames from "classnames";
 import SelectField from "./SelectField";
 import axios from "axios";
 
-const CountryField = (props) => {
+const CountryField = props => {
   const { className, countryCode, ...attributes } = props;
+
   const [states, setStates] = useState([]);
   const [selectedValue, setSelectedValue] = useState("-1");
+
   const stateStyle = classnames("r-state", classnames);
 
   useEffect(() => {
     try {
       let url;
+
       if (countryCode) {
         url = `https://eh2yg1n3zh.execute-api.ap-south-1.amazonaws.com/Prod/api/StateMaster/GetByStateCode?StateCode=${countryCode}`;
-        axios.get(url).then((res) => {
+        axios.get(url).then(res => {
           if (res.status === 200) {
             setStates([res.data]);
             setSelectedValue(String(countryCode));
@@ -27,7 +30,7 @@ const CountryField = (props) => {
         // all state
         url =
           "https://eh2yg1n3zh.execute-api.ap-south-1.amazonaws.com/Prod/api/StateMaster/GetAll";
-        axios.get(url).then((res) => {
+        axios.get(url).then(res => {
           if (res.status === 200) {
             setStates(res.data.stateList);
           } else {
@@ -49,7 +52,7 @@ const CountryField = (props) => {
         {...attributes}
       >
         {states.length &&
-          states.map((state) => (
+          states.map(state => (
             <option
               key={state.stateCode}
               selected={state.stateCode === selectedValue}
@@ -64,7 +67,7 @@ const CountryField = (props) => {
 };
 
 CountryField.propTypes = {
-  countryCode: PropTypes.string,
+  countryCode: PropTypes.string
 };
 
 export default CountryField;
