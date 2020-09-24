@@ -6,7 +6,7 @@ const NavMenu = (props) => {
     <>
       <p>
         Link to Install :
-        https://npmphoenix.s3.ap-south-1.amazonaws.com/saral-component-2.0.0.tgz
+        https://npmphoenix.s3.ap-south-1.amazonaws.com/phoenix-component-2.0-1.0.0.tgz
       </p>
       {/* <NavLink activeClassName="r-nav-active" to="/dashboard/gst">
         GST

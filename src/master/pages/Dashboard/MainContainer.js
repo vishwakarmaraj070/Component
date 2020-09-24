@@ -2,12 +2,14 @@ import React, { useState, lazy, Suspense } from "react";
 import Breadcrumb from "../../component/Breadcrumb/Breadcrumb";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Fade } from "react-reveal";
+import DashboardPage from "../../../pages/DashboardPage";
 const ButtonPage = lazy(() => import("../../../pages/ButtonPage"));
 const CardPage = lazy(() => import("../../../pages/CardPage"));
 const InputPage = lazy(() => import("../../../pages/InputPage"));
 const ModalPage = lazy(() => import("../../../pages/ModalPage"));
 const TablePage = lazy(() => import("../../../pages/TablePage"));
 const NotificationPage = lazy(() => import("../../../pages/NotificationPage"));
+const OtherPage = lazy(() => import("../../../pages/OtherPage"));
 const TestingPage = lazy(() => import("../../../pages/TestingPage"));
 
 const MainContainer = (props) => {
@@ -19,6 +21,7 @@ const MainContainer = (props) => {
     { page: "modal", component: ModalPage },
     { page: "table", component: TablePage },
     { page: "notification", component: NotificationPage },
+    { page: "other", component: OtherPage },
     { page: "testingpage", component: TestingPage },
   ];
   return (
@@ -31,11 +34,7 @@ const MainContainer = (props) => {
         style={{ position: "relative", zIndex: "20" }}
       >
         <Switch>
-          <Route
-            exact
-            path={`${path}`}
-            render={() => <Redirect to={`${path}/button`} />}
-          />
+          <Route exact path={`${path}`} render={() => <DashboardPage />} />
           {components.map((list, index) => (
             <Route
               key={index}

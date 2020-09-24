@@ -9,21 +9,16 @@ const index = (props) => {
         <FieldSet legend="Inputs">
           <div className="row-container">
             <div className="component-discription">
-              <Input size="sm" required className="input2" />
-              <Input required className="input2" />
-              <Input size="lg" required className="input2" />
+              <Input size="sm" required />
+              <Input required />
+              <Input size="lg" required />
               <div className="discription">
-                <pre>{`<Input size="sm" required className="input2" />`}</pre>
+                <pre>{`<Input size="sm" required />`}</pre>
               </div>
             </div>
             <div className="component-discription">
-              <Input
-                size="sm"
-                required
-                className="input2"
-                error="Field required"
-              />
-              <Input required className="input2" error="Field required" />
+              <Input size="sm" required error="Field required" />
+              <Input required error="Field required" />
               <Input
                 size="lg"
                 required

@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./master-breadcume.css";
-// import { ReactComponent as HomeIcon } from "phoenix-component/Icons/Basic/home.svg";
+import { ReactComponent as HomeIcon } from "../../../Icons/Basic/home.svg";
 import { NavLink } from "react-router-dom";
 // import { DataListField } from "phoenix-component";
 
 const Breadcrumb = (props) => {
   const [steps, setSteps] = useState([]);
-  console.log("staps", steps);
   useEffect(() => {
     const href = window.location.href;
     setSteps(href.split("/"));
   }, [window.location.href]);
-
-  const components = ["button", "Input", "Card", "Table", "Modal"];
 
   return (
     <div className="master-breadcumb">
@@ -22,7 +19,9 @@ const Breadcrumb = (props) => {
           activeClassName="breadcrumb__step--active"
           to="/dashboard"
         >
-          <span className="before"></span>
+          <span className="before">
+            <HomeIcon />
+          </span>
           <span className="after" />
         </NavLink>
         {steps &&

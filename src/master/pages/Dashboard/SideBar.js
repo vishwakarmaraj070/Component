@@ -14,6 +14,7 @@ const SideBar = (props) => {
     "Table",
     "Modal",
     "Notification",
+    "Other",
     "testingpage",
   ];
   return (
