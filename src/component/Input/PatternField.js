@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { checkPattern } from "../../../Validation";
+import { checkPattern } from "../../Validation";
 
-const PatternField = props => {
+const PatternField = (props) => {
   // props
   const { onKeyUp, required, pattern, patternMsg, ...attributes } = props;
   const [error, setError] = useState();
 
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -33,7 +33,7 @@ PatternField.propTypes = {
   onKeyUp: PropTypes.func,
   required: PropTypes.bool,
   patternMsg: PropTypes.string,
-  pattern: PropTypes.string
+  pattern: PropTypes.string,
 };
 
 export default PatternField;

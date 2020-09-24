@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Aadhar } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { Aadhar } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 import NumberField from "./NumberField";
 
-const AadhaarField = props => {
+const AadhaarField = (props) => {
   // props
   const { onKeyUp, required, ...attributes } = props;
   const [error, setError] = useState();
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -27,7 +27,7 @@ const AadhaarField = props => {
           [6, 5, 9, 8, 7, 1, 0, 4, 3, 2],
           [7, 6, 5, 9, 8, 2, 1, 0, 4, 3],
           [8, 7, 6, 5, 9, 3, 2, 1, 0, 4],
-          [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+          [9, 8, 7, 6, 5, 4, 3, 2, 1, 0],
         ];
         // permutation table
         const p = [
@@ -38,13 +38,10 @@ const AadhaarField = props => {
           [9, 4, 5, 3, 1, 2, 6, 8, 7, 0],
           [4, 2, 8, 6, 5, 7, 3, 9, 0, 1],
           [2, 7, 9, 3, 8, 0, 6, 4, 1, 5],
-          [7, 0, 4, 6, 9, 1, 3, 2, 5, 8]
+          [7, 0, 4, 6, 9, 1, 3, 2, 5, 8],
         ];
         let c = 0;
-        let invertedArray = value
-          .split("")
-          .map(Number)
-          .reverse();
+        let invertedArray = value.split("").map(Number).reverse();
         invertedArray.forEach((val, i) => {
           c = d[c][p[i % 8][val]];
         });
@@ -72,7 +69,7 @@ const AadhaarField = props => {
 
 AadhaarField.propTypes = {
   onKeyUp: PropTypes.func,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 export default AadhaarField;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { TAN } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { TAN } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
 const TANField = (props) => {
   // props

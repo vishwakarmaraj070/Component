@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import NumberField from "./NumberField";
-import {
-  AmountWithDecimal,
-  AmountWithDecimalNoNegative
-} from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { AmountWithDecimal, AmountWithDecimalNoNegative } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
-const AmountWithDecimalField = props => {
+const AmountWithDecimalField = (props) => {
   // props
   const { onKeyUp, required, noNegative, ...attributes } = props;
   const [error, setError] = useState();
 
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -50,7 +47,7 @@ const AmountWithDecimalField = props => {
 AmountWithDecimalField.propTypes = {
   onKeyUp: PropTypes.func,
   noNegative: PropTypes.bool,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 export default AmountWithDecimalField;

@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import ErrorIcon from "./errorSvg.svg";
-import { checkExactLength } from "../../../Validation";
+import { checkExactLength } from "../../Validation";
 import IconButton from "../Button/IconButton";
 
 const Input = React.forwardRef((props, ref) => {

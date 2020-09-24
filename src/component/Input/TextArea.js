@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import { checkExactLength } from "../../../Validation";
+import { checkExactLength } from "../../Validation";
 
-const TextArea = props => {
+const TextArea = (props) => {
   const {
     size,
     hint,
@@ -30,7 +30,7 @@ const TextArea = props => {
   const [errorMsg, setErrorMsg] = useState();
 
   // handle blur
-  const handleBlur = e => {
+  const handleBlur = (e) => {
     onBlur && onBlur(e);
     if (required) {
       onBlur && onBlur(e);
@@ -47,7 +47,7 @@ const TextArea = props => {
   };
 
   // function onkeyup
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     handleBlur(e);
     // check exact
@@ -70,7 +70,7 @@ const TextArea = props => {
   const styles = classnames(
     "r-input-box",
     {
-      "input-msg": hint || error || errorMsg
+      "input-msg": hint || error || errorMsg,
     },
     className
   );
@@ -80,26 +80,26 @@ const TextArea = props => {
     "r-input",
     {
       [`input-${size}`]: size,
-      [`resize-${resize}`]: resize
+      [`resize-${resize}`]: resize,
     },
     inputClasses
   );
 
   // style hint
   const hintStyles = classnames("r-hint", {
-    right: hintRight
+    right: hintRight,
   });
 
   // style error
   const errorStyles = classnames("r-error", {
-    right: errorRight
+    right: errorRight,
   });
 
   // style border
   const borderStyles = classnames(
     "r-input-border",
     {
-      "fixed-border": isEmpty
+      "fixed-border": isEmpty,
     },
     borderStyle
   );
@@ -139,7 +139,7 @@ TextArea.defaultProps = {
   type: "text",
   rows: 4,
   resize: "vertical",
-  borderStyle: "none"
+  borderStyle: "none",
 };
 
 TextArea.propTypes = {
@@ -159,7 +159,7 @@ TextArea.propTypes = {
   resize: PropTypes.oneOf(["both", "none", "vertical", "horizontal"]),
   required: PropTypes.bool,
   rows: PropTypes.number,
-  maxLength: PropTypes.number
+  maxLength: PropTypes.number,
 };
 
 export default TextArea;

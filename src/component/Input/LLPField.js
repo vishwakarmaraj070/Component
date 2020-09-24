@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { LLP } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { LLP } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
-const LLPField = props => {
+const LLPField = (props) => {
   // props
   const { onKeyUp, required, ...attributes } = props;
   const [error, setError] = useState();
 
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -33,7 +33,7 @@ const LLPField = props => {
 
 LLPField.propTypes = {
   onKeyUp: PropTypes.func,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 export default LLPField;

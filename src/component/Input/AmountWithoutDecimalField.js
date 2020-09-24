@@ -3,17 +3,17 @@ import PropTypes from "prop-types";
 import NumberField from "./NumberField";
 import {
   AmountWithoutDecimal,
-  AmountWithoutDecimalNoNegative
-} from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+  AmountWithoutDecimalNoNegative,
+} from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
-const AmountWithoutDecimalField = props => {
+const AmountWithoutDecimalField = (props) => {
   // props
   const { onKeyUp, required, noNegative, ...attributes } = props;
   const [error, setError] = useState();
 
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -50,7 +50,7 @@ const AmountWithoutDecimalField = props => {
 AmountWithoutDecimalField.propTypes = {
   onKeyUp: PropTypes.func,
   noNegative: PropTypes.bool,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 export default AmountWithoutDecimalField;

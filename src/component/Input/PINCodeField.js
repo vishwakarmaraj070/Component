@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { PinCodeIndia, PinCodeOutside } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { PinCodeIndia, PinCodeOutside } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 import NumberField from "./NumberField";
 
 const PINCodeField = (props) => {

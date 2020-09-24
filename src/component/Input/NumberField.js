@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { checkExactLength } from "../../../Validation";
+import { checkExactLength } from "../../Validation";
 
 const NumberField = (props) => {
   // distruchuring props

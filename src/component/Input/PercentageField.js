@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { Percentage } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { Percentage } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
-const PercentageField = props => {
+const PercentageField = (props) => {
   // props
   const { onKeyUp, required, ...attributes } = props;
   const [error, setError] = useState();
 
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -37,7 +37,7 @@ const PercentageField = props => {
 
 PercentageField.propTypes = {
   onKeyUp: PropTypes.func,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 export default PercentageField;

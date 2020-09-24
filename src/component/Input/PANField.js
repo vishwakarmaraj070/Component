@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { PAN } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { PAN } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
 const PANField = (props) => {
   // props

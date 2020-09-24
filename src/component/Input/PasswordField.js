@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Password } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { Password } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 import Input from "./Input";
 
-const PasswordField = props => {
+const PasswordField = (props) => {
   // props
   const { onKeyUp, className, type, required, ...attributes } = props;
   const [error, setError] = useState();
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -32,13 +32,13 @@ const PasswordField = props => {
 
 PasswordField.defaultProps = {
   required: true,
-  type: "password"
+  type: "password",
 };
 PasswordField.propTypes = {
   onKeyUp: PropTypes.func,
   required: PropTypes.bool,
   icon: PropTypes.node,
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 export default PasswordField;

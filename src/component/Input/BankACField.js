@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "./Input";
-import { BankAccount } from "../../../Pattern";
-import { checkPattern } from "../../../Validation";
+import { BankAccount } from "../../Pattern";
+import { checkPattern } from "../../Validation";
 
-const BankACField = props => {
+const BankACField = (props) => {
   // props
   const { onKeyUp, required, ...attributes } = props;
   const [error, setError] = useState();
 
   // function here
-  const handleKeyUp = e => {
+  const handleKeyUp = (e) => {
     onKeyUp && onKeyUp(e);
     const value = e.target.value;
     if (value.length) {
@@ -36,7 +36,7 @@ const BankACField = props => {
 
 BankACField.propTypes = {
   onKeyUp: PropTypes.func,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 export default BankACField;
