@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CardHeader } from "../Card";
 import { IconButton } from "../Button";
-import { clearInputError } from "../../../Validation";
+import { clearInputError } from "../../Validation";
 
 const ModalHeader = React.memo((props) => {
   const { toggleOpen, allowClose, formId, ...attr } = props;
