@@ -79,7 +79,7 @@ const Notification = React.memo((props) => {
 Notification.defaultProps = {
   color: "primary",
   position: "top-right",
-  timer: 2500,
+  timer: 2000,
 };
 
 Notification.propTypes = {

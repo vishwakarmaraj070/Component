@@ -11,7 +11,7 @@ const DeleteNotification = (props) => {
 };
 
 DeleteNotification.defaultProps = {
-  msg: "Deleted Succussfully!",
+  msg: "Deleted Successfully!",
 };
 
 export default DeleteNotification;

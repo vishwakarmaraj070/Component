@@ -1,6 +1,7 @@
 import React from "react";
 import FieldSet from "../../master/component/FieldSet";
-import { Input } from "../../component/Input";
+import { Input, SelectField } from "../../component/Input";
+import DragAndDrop from "../../component/DragAndDrop/Index";
 
 const index = (props) => {
   return (
@@ -17,22 +18,18 @@ const index = (props) => {
               </div>
             </div>
             <div className="component-discription">
-              <Input size="sm" required error="Field required" />
-              <Input required error="Field required" />
-              <Input
-                size="lg"
-                required
-                className="input2"
-                error="Field required"
-              />
-              <div className="discription">
+              <Input size="sm" required label="Name" />
+              <Input required />
+              <Input size="lg" required error="Field required" />
+              <SelectField required label="select"></SelectField>
+              {/* <div className="discription">
                 <pre>{` <Input
                 size="sm"
                 required
                 className="input2"
                 error="Field required"
               />`}</pre>
-              </div>
+              </div> */}
             </div>
           </div>
         </FieldSet>

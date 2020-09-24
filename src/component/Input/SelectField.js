@@ -16,6 +16,7 @@ const SelectField = (props) => {
     onBlur,
     defaultValue,
     value,
+    id,
     onChange,
     required,
     children,
@@ -88,13 +89,32 @@ const SelectField = (props) => {
   return (
     <div className={selectStyle}>
       {/* label */}
-      {label && <label className={labelStyle}>{label}</label>}
+      {label && (
+        <div className="flex">
+          <label className={labelStyle} htmlFor={id}>
+            {label}
+          </label>
+          {required && (
+            <div
+              style={{
+                color: "#c5c9d8",
+                fontStyle: "italic",
+                fontSize: "12px",
+                marginLeft: "3px",
+              }}
+            >
+              (required)
+            </div>
+          )}
+        </div>
+      )}
       {/* select */}
       <select
         {...(errorMsg || error ? { error: "true" } : {})}
         onBlur={handleBlur}
         onChange={handleChange}
         required={required}
+        id={id}
         value={value == 0 ? value : value ? value : "-1"}
         defaultValue={
           defaultValue == 0 ? defaultValue : defaultValue ? defaultValue : "-1"
@@ -130,6 +150,7 @@ const SelectField = (props) => {
 SelectField.defaultProps = {
   defaultText: "select",
   value: "-1",
+  id: "id",
 };
 
 SelectField.propTypes = {

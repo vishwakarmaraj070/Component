@@ -1,6 +1,6 @@
 $top: 20px !default;
 $bottom: 20px !default;
-$closer-timmer: 2s !default;
+$closer-timmer: 1.5s !default;
 
 @mixin showNotification($x: 0) {
   transform: translateX($x);

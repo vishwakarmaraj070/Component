@@ -1,9 +1,9 @@
 import React, { useState, useEffect, createRef } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
-import DownArrow from "./down-arrow.svg";
-import CloudUpload from "./cloud-upload.svg";
-import FileIcon from "./file-alt.svg";
+import { ReactComponent as DownArrow } from "./down-arrow.svg";
+import { ReactComponent as CloudUpload } from "./cloud-upload.svg";
+import { ReactComponent as FileIcon } from "./file-alt.svg";
 import Progress from "../ProgressBar";
 import Button from "../Button/Button";
 

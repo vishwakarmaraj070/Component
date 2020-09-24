@@ -200,17 +200,17 @@ textarea[error] {
   }
 }
 
-.search {
+.r-input-box {
   position: relative;
+  margin-bottom: $input-margin-bottom;
 
-  button {
+  // buton
+  .btn-2-0-0.rbtn {
+    margin: 0;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 27px !important;
-    height: 27px !important;
-    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -218,26 +218,39 @@ textarea[error] {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     right: 6px;
-    cursor: pointer;
-    padding: 0.4rem;
-    font-size: 0.9rem;
-    opacity: 0.7;
-    margin: 0;
-    img,
-    svg,
-    i {
-      width: 14px;
-      height: 14px;
-    }
-    &:hover {
-      opacity: 1;
+    z-index: 10;
+
+    button.btn2 {
+      width: 27px !important;
+      height: 27px !important;
+      cursor: pointer;
+      padding: 0.4rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin: 0;
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: auto;
+        width: auto;
+        max-width: initial;
+        padding: 0;
+      }
+      img,
+      svg,
+      i {
+        width: 16px;
+        height: 16px;
+      }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
-}
 
-.r-input-box {
-  position: relative;
-  margin-bottom: $input-margin-bottom;
   // input style
 
   .input-wrapper {
@@ -345,7 +358,7 @@ textarea[error] {
 
   label.label-style {
     display: block;
-    font-size: 12px;
+    font-size: 12.5px;
     letter-spacing: 0.5px;
     font-weight: 600;
     color: $dusky-blue;
@@ -384,7 +397,16 @@ textarea[error] {
   // input size
   .input-lg {
     @include input-size($input-font-size-lg, $input-padding-lg);
-
+    ~ .btn-2-0-0.rbtn button.btn2 {
+      width: 30px !important;
+      height: 30px !important;
+      img,
+      svg,
+      i {
+        width: 18px;
+        height: 18px;
+      }
+    }
     // ~ .r-label {
     //   top: 18px;
     // }
@@ -405,6 +427,16 @@ textarea[error] {
     @include input-size($input-font-size-sm, $input-padding-sm);
     ~ .r-input-border {
       top: 0;
+    }
+    ~ .btn-2-0-0.rbtn button.btn2 {
+      width: 21px !important;
+      height: 21px !important;
+      img,
+      svg,
+      i {
+        width: 13px;
+        height: 13px;
+      }
     }
     // ~ .r-label {
     //   top: 9px;

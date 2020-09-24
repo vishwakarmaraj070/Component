@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createRef } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import ErrorIcon from "./errorSvg.svg";
+import { ReactComponent as ErrorIcon } from "./errorSvg.svg";
 import { checkExactLength } from "../../Validation";
 import IconButton from "../Button/IconButton";
 
@@ -167,9 +167,23 @@ const Input = React.forwardRef((props, ref) => {
   return (
     <div style={style} className={styles}>
       {label && (
-        <label className={labelStyle} htmlFor={id}>
-          {label}
-        </label>
+        <div className="flex">
+          <label className={labelStyle} htmlFor={id}>
+            {label}
+          </label>
+          {required && (
+            <div
+              style={{
+                color: "#c5c9d8",
+                fontStyle: "italic",
+                fontSize: "12px",
+                marginLeft: "3px",
+              }}
+            >
+              (required)
+            </div>
+          )}
+        </div>
       )}
       <div style={{ position: "relative" }}>
         <input
@@ -193,6 +207,7 @@ const Input = React.forwardRef((props, ref) => {
         {errorMsg ? (
           <IconButton
             flat
+            rounded
             color="danger"
             onClick={handleErrorDisplay}
             style={{ opacity: 1 }}
@@ -203,6 +218,7 @@ const Input = React.forwardRef((props, ref) => {
           <IconButton
             flat
             color="danger"
+            rounded
             onClick={handleErrorDisplay}
             style={{ opacity: 1 }}
           >
