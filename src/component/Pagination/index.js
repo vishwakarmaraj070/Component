@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import PageItem from "./PageItem";
 import PageLink from "./PageLink";
-import AngleIcon from "./angle-right-b.svg";
-import MoreIcon from "./ellipsis-h.svg";
+import { ReactComponent as AngleIcon } from "./angle-right-b.svg";
+import { ReactComponent as MoreIcon } from "./ellipsis-h.svg";
 
 const Pagination = (props) => {
   const {
@@ -13,6 +13,8 @@ const Pagination = (props) => {
     totalLength,
     dataPerPage,
     onClick,
+    pageSize,
+    pageNumber,
     onChange,
     color,
     ...attributes
@@ -23,8 +25,8 @@ const Pagination = (props) => {
   const [activePage, setActivePage] = useState();
   const [fromData, setFromData] = useState();
   const [toData, setToData] = useState();
-
   const [dataPerPageActive, setDataPerPageActive] = useState(5);
+
   const classes = classNames(
     `pg-${color}`,
     {
@@ -169,17 +171,17 @@ const Pagination = (props) => {
   }, [totalLength]);
 
   useEffect(() => {
-    setDataPerPageActive(dataPerPage[0]);
+    setDataPerPageActive(Number(pageSize));
     if (totalLength > 0) {
-      setActivePage(1);
+      setActivePage(Number(pageNumber));
       setFromData(1);
     } else {
       setActivePage(0);
       setFromData(0);
     }
 
-    handleFromTo(dataPerPage[0], 1);
-    handlePageCount(dataPerPage[0]);
+    handleFromTo(Number(pageSize), Number(pageNumber));
+    handlePageCount(Number(pageSize));
   }, [totalLength]);
 
   return (
@@ -279,6 +281,8 @@ Pagination.propTypes = {
 Pagination.defaultProps = {
   circle: false,
   color: "primary",
+  pageNumber: 1,
+  pageSize: 5,
   totalLength: 0,
   dataPerPage: [5, 25, 50, 100],
 };
