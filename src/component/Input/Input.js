@@ -141,9 +141,11 @@ const Input = React.forwardRef((props, ref) => {
   );
 
   const handleErrorDisplay = (e) => {
+    e.preventDefault()
     setDisplayError(!isDisplayError);
   };
   const handleClick = (e) => {
+    e.preventDefault()
     onClick && onClick(e);
   };
 
@@ -204,43 +206,38 @@ const Input = React.forwardRef((props, ref) => {
           ref={ref}
           {...attributes}
         />
+          {icon && (
+          <IconButton
+            flat
+            rounded
+            onClick={handleClick}
+            style={
+              error || errorMsg
+                ? { right: " 32px", zIndex: 5 }
+                : {}
+                
+            }
+          >
+            {icon}
+          </IconButton>
+        )}
         {errorMsg ? (
           <IconButton
             flat
             rounded
             color="danger"
             onClick={handleErrorDisplay}
-            style={{ opacity: 1 }}
           >
             <ErrorIcon />
           </IconButton>
-        ) : error ? (
+        ) : error && (
           <IconButton
             flat
             color="danger"
             rounded
             onClick={handleErrorDisplay}
-            style={{ opacity: 1 }}
           >
             <ErrorIcon />
-          </IconButton>
-        ) : (
-          ""
-        )}
-
-        {icon && (
-          <IconButton
-            flat
-            onClick={handleClick}
-            style={
-              error
-                ? { right: " 32px", zIndex: 5 }
-                : errorMsg
-                ? { right: " 32px", zIndex: 5 }
-                : {}
-            }
-          >
-            {icon}
           </IconButton>
         )}
       </div>

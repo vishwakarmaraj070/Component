@@ -1,6 +1,6 @@
 import React from "react";
 import FieldSet from "../../master/component/FieldSet";
-import { Input, SelectField } from "../../component/Input";
+import { Input, PasswordField, SelectField } from "../../component/Input";
 import DragAndDrop from "../../component/DragAndDrop/Index";
 
 const index = (props) => {
@@ -22,6 +22,7 @@ const index = (props) => {
               <Input required />
               <Input size="lg" required error="Field required" />
               <SelectField required label="select"></SelectField>
+              <PasswordField icon="$" size="sm" />
               {/* <div className="discription">
                 <pre>{` <Input
                 size="sm"

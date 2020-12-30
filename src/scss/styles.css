@@ -2161,8 +2161,8 @@ textarea[error] ~ .r-input-border {
 .r-input-box .btn-2-0-0.rbtn button.btn2 img,
 .r-input-box .btn-2-0-0.rbtn button.btn2 svg,
 .r-input-box .btn-2-0-0.rbtn button.btn2 i {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 .r-input-box .btn-2-0-0.rbtn button.btn2:hover {
