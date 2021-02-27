@@ -4,7 +4,7 @@ import Notification from "./Notification";
 const UpdateNotification = (props) => {
   const { color, children, msg, ...attr } = props;
   return (
-    <Notification color="secondary" {...attr}>
+    <Notification audioType="update" color="secondary" {...attr}>
       {children ? children : msg}
     </Notification>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
+import { useAudio } from "../useAudio";
 
 const Notification = React.memo((props) => {
   const {
@@ -9,6 +10,7 @@ const Notification = React.memo((props) => {
     children,
     position,
     timer,
+    audioType="success",
     toggle,
     className,
     ...attributes
@@ -23,12 +25,23 @@ const Notification = React.memo((props) => {
     className
   );
 
+  const soundLists = {
+    "success" : 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/success.mp3',
+    "faild" : 'https://notificationsounds.com/storage/sounds/file-sounds-1137-eventually.mp3',
+    "update" : 'https://notificationsounds.com/storage/sounds/file-sounds-1150-pristine.mp3',
+    "warning" : 'https://notificationsounds.com/storage/sounds/file-sounds-1133-anxious.mp3'
+
+  }
+
   const handleShow = () => {
     let toast = document.querySelector(
       `div[data-test="notification-${numberOfToast.length}"]`
     );
     if (toast) {
       toast.classList.add("show");
+       setTimeout(() => {
+        useAudio(soundLists["success"])
+      }, 100)
     }
   };
 
@@ -41,6 +54,10 @@ const Notification = React.memo((props) => {
       }, 200);
     }
   };
+
+
+
+
 
   useEffect(() => {
     if (toggle) {

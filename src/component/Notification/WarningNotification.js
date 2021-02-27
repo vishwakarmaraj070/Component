@@ -4,7 +4,7 @@ import Notification from "./Notification";
 const WarningNotification = (props) => {
   const { color, children, msg, ...attr } = props;
   return (
-    <Notification color="close" {...attr}>
+    <Notification audioType={"warning"} color="close" {...attr}>
       {children ? children : msg}
     </Notification>
   );

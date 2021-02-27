@@ -3,7 +3,7 @@ import Notification from "./Notification";
 
 const SaveNotification = (props) => {
   const { color, children, msg, ...attr } = props;
-  return <Notification {...attr}>{children ? children : msg}</Notification>;
+  return <Notification audioType={'success'} {...attr}>{children ? children : msg}</Notification>;
 };
 
 SaveNotification.defaultProps = {

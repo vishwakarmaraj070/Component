@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import { useAudio } from "../useAudio";
 
 const withModal = (OriginalComponent) => {
   const WithModal = React.memo(
@@ -30,6 +31,7 @@ const withModal = (OriginalComponent) => {
 
       useEffect(() => {
         if (backdropClick) {
+          useAudio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/error.mp3")
           setTimeout(() => {
             setbackDropClick(false);
           }, 400);

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import FieldSet from "../../master/component/FieldSet";
 import { Button } from "../../component/Button";
@@ -18,13 +18,21 @@ const Notifications = (props) => {
   const [n5, setN5] = useState(false);
   const [n6, setN6] = useState(false);
 
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      setN1(true)
+    },5000)
+  },[])
+
   return (
     <div className="page-container">
       <div className="mb-3">
         <FieldSet legend="Notifications">
           <div className="row-container">
             <div className="component-discription">
-              <Notification show={n1} toggle={setN1}>
+              <Notification show={n1}  toggle={setN1}>
                 Notification msg
               </Notification>
               <Button onClick={() => setN1(true)}>Notification</Button>

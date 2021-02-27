@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import "../src/scss/styles.css";
 import {
@@ -12,7 +12,9 @@ import PageLoader from "./master/component/PageLoader";
 // lazy import
 const Dashboard = React.lazy(() => import("./master/pages/Dashboard"));
 
-function App() {
+const App = (props) => {
+
+ 
   return (
     <main id="saral-pro-app">
       <Router>
